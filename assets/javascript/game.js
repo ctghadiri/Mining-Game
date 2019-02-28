@@ -9,21 +9,21 @@ $("#number-to-guess").text(targetNumber);
 var counter = 0;
 
 var image1 = $("#1");
-    image1.attr("data-crystalvalue", Math.floor(Math.random()*12 + 1))
+    image1.attr("data-mineValue", Math.floor(Math.random()*12 + 1))
 var image2 = $("#2");
-    image2.attr("data-crystalvalue", Math.floor(Math.random()*12 + 1))
+    image2.attr("data-mineValue", Math.floor(Math.random()*12 + 1))
 var image3 = $("#3");
-    image3.attr("data-crystalvalue", Math.floor(Math.random()*12 + 1))
+    image3.attr("data-mineValue", Math.floor(Math.random()*12 + 1))
 var image4 = $("#4");
-    image4.attr("data-crystalvalue", Math.floor(Math.random()*12 + 1))
+    image4.attr("data-mineValue", Math.floor(Math.random()*12 + 1))
 
 $(".pick-image").on("click", function() {
 
-    var crystalValue = ($(this).attr("data-crystalvalue"));
+    var pickValue = ($(this).attr("data-mineValue"));
 
-    crystalValue = parseInt(crystalValue);
+    pickValue = parseInt(pickValue);
 
-    counter += crystalValue;
+    counter += pickValue;
 
 
     if (counter === targetNumber) {
@@ -32,10 +32,10 @@ $(".pick-image").on("click", function() {
         wins++;
         counter = 0;
         $("#number-to-guess").text(targetNumber);
-        image1.attr("data-crystalvalue", Math.floor(Math.random()*12 + 1))
-        image2.attr("data-crystalvalue", Math.floor(Math.random()*12 + 1))
-        image3.attr("data-crystalvalue", Math.floor(Math.random()*12 + 1))
-        image4.attr("data-crystalvalue", Math.floor(Math.random()*12 + 1))
+        image1.attr("data-mineValue", Math.floor(Math.random()*12 + 1))
+        image2.attr("data-mineValue", Math.floor(Math.random()*12 + 1))
+        image3.attr("data-mineValue", Math.floor(Math.random()*12 + 1))
+        image4.attr("data-mineValue", Math.floor(Math.random()*12 + 1))
 
     }
 
@@ -45,10 +45,10 @@ $(".pick-image").on("click", function() {
         losses++;
         counter = 0;
         $("#number-to-guess").text(targetNumber);
-        image1.attr("data-crystalvalue", Math.floor(Math.random()*12 + 1))
-        image2.attr("data-crystalvalue", Math.floor(Math.random()*12 + 1))
-        image3.attr("data-crystalvalue", Math.floor(Math.random()*12 + 1))
-        image4.attr("data-crystalvalue", Math.floor(Math.random()*12 + 1))
+        image1.attr("data-mineValue", Math.floor(Math.random()*12 + 1))
+        image2.attr("data-mineValue", Math.floor(Math.random()*12 + 1))
+        image3.attr("data-mineValue", Math.floor(Math.random()*12 + 1))
+        image4.attr("data-mineValue", Math.floor(Math.random()*12 + 1))
 
     }
     $("#wins-text").text("Wins: " + wins);
